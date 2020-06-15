@@ -1,4 +1,4 @@
-$ git clone https://github.com/start-angular/SB-Admin-BS4-Angular-8.git
+$ git clone https://github.com/nareshmali26/News_Website.git
 $ cd SB-Admin-BS4-Angular-8
 # install the project's dependencies
 $ npm install
