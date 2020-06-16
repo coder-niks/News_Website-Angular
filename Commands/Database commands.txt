@@ -1,0 +1,9 @@
+create new folder for example backendDemo
+navigate into BackendDemo
+run command 
+npm init -y
+[9:49 AM, 6/16/2020] +91 76890 18705: run command 
+npm i express body-parser cors mongodb --save
+run command 
+node index.js
+go to angular project change url of api

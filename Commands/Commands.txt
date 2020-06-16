@@ -1,0 +1,15 @@
+npm install rxjs
+npm install bootstrap
+npm i -g typescript
+npm i -g @angular/cli // for "Angular Installation command"
+ng new pro1  // for "create project folder"
+
+step 1: go inside projectfolder
+step 2: ng serve -o    //  open server
+ng g c home // for create menus
+ng g c header // for create header
+ng g c footer // for create footer
+ng new websitewithDashboard  // create admin pannel
+
+ng g s data  // create a service
+ng g pipe greet // 

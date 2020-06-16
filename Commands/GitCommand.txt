@@ -1,0 +1,14 @@
+cd..
+cd /e
+mkdir news   //for create directory
+cd news
+git clone https://github.com/nareshmali26/News_Website.git
+git status
+git pull origin master
+git add .
+git status
+git commit -m "Initial Commit"
+git push origin master
+cd..
+cd Testing/
+git clone https://github.com/nareshmali26/News_Website.git
