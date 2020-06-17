@@ -1,13 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ArtComponent } from './art/art.component';
+import { BusinessComponent } from './business/business.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { IndexInnerComponent } from './index-inner/index-inner.component';
+import { MagazineComponent } from './magazine/magazine.component';
+import { PoliticsComponent } from './politics/politics.component';
+import { TravelComponent } from './travel/travel.component';
 
 
 
 const routes: Routes = [
-  {path:'', component:SigninComponent},
-  {path:'signup', component:SignupComponent}
+  {path:'', component:HomeComponent},
+  {path:'about', component:AboutComponent},
+  {path:'art', component:ArtComponent},
+  {path:'business', component:BusinessComponent},
+  {path:'contactus', component:ContactusComponent},
+  {path:'index-inner', component:AboutComponent},
+  {path:'magazine', component:IndexInnerComponent},
+  {path:'politics', component:MagazineComponent},
+  {path:'sports', component:PoliticsComponent},
+  {path:'travel', component:TravelComponent}
   
 ];
 

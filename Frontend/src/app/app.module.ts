@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
@@ -16,12 +14,13 @@ import { MagazineComponent } from './magazine/magazine.component';
 import { PoliticsComponent } from './politics/politics.component';
 import { SportsComponent } from './sports/sports.component';
 import { TravelComponent } from './travel/travel.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent,
-    SignupComponent,
     AboutComponent,
     ArtComponent,
     BusinessComponent,
@@ -30,7 +29,10 @@ import { TravelComponent } from './travel/travel.component';
     MagazineComponent,
     PoliticsComponent,
     SportsComponent,
-    TravelComponent
+    TravelComponent,
+    FooterComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
