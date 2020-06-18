@@ -9,20 +9,26 @@ import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { PoliticsComponent } from './politics/politics.component';
 import { TravelComponent } from './travel/travel.component';
+import { WebsiteComponent } from './website/website.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  {path:'about', component:AboutComponent},
-  {path:'art', component:ArtComponent},
-  {path:'business', component:BusinessComponent},
-  {path:'contactus', component:ContactusComponent},
-  {path:'index-inner', component:AboutComponent},
-  {path:'magazine', component:IndexInnerComponent},
-  {path:'politics', component:MagazineComponent},
-  {path:'sports', component:PoliticsComponent},
-  {path:'travel', component:TravelComponent}
+ 
+  {path: '', component:WebsiteComponent, children:[
+                                                    {path:'', component:HomeComponent},
+                                                    {path:'about', component:AboutComponent},
+                                                    {path:'art', component:ArtComponent},
+                                                    {path:'business', component:BusinessComponent},
+                                                    {path:'contactus', component:ContactusComponent},
+                                                    {path:'index-inner', component:AboutComponent},
+                                                    {path:'magazine', component:IndexInnerComponent},
+                                                    {path:'politics', component:MagazineComponent},
+                                                    {path:'sports', component:PoliticsComponent},
+                                                    {path:'travel', component:TravelComponent},
+  ]},
+  {path: 'dashboard', component:DashboardComponent}
   
 ];
 
