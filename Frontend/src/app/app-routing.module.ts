@@ -10,6 +10,7 @@ import { PoliticsComponent } from './politics/politics.component';
 import { TravelComponent } from './travel/travel.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SportsComponent } from './sports/sports.component';
 
 
 
@@ -21,9 +22,9 @@ const routes: Routes = [
                                                     {path:'art', component:ArtComponent},
                                                     {path:'business', component:BusinessComponent},
                                                     {path:'contactus', component:ContactusComponent},
-                                                    {path:'magazine', component:IndexInnerComponent},
-                                                    {path:'politics', component:MagazineComponent},
-                                                    {path:'sports', component:PoliticsComponent},
+                                                    {path:'magazine', component:MagazineComponent},
+                                                    {path:'politics', component:PoliticsComponent},
+                                                    {path:'sports', component:SportsComponent},
                                                     {path:'travel', component:TravelComponent},
   ]},
   {path: 'dashboard', component:DashboardComponent}
