@@ -9,7 +9,6 @@ import { AboutComponent } from './about/about.component';
 import { ArtComponent } from './art/art.component';
 import { BusinessComponent } from './business/business.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { PoliticsComponent } from './politics/politics.component';
 import { SportsComponent } from './sports/sports.component';
@@ -27,7 +26,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ArtComponent,
     BusinessComponent,
     ContactusComponent,
-    IndexInnerComponent,
     MagazineComponent,
     PoliticsComponent,
     SportsComponent,
