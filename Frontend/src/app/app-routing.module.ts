@@ -11,6 +11,8 @@ import { TravelComponent } from './travel/travel.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SportsComponent } from './sports/sports.component';
+import { IndexInnerComponent } from './index-inner/index-inner.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,6 +20,7 @@ const routes: Routes = [
  
   {path: '', component:WebsiteComponent, children:[
                                                     {path:'', component:HomeComponent},
+                                                    {path:'home', component:HomeComponent},
                                                     {path:'about', component:AboutComponent},
                                                     {path:'art', component:ArtComponent},
                                                     {path:'business', component:BusinessComponent},
@@ -26,7 +29,10 @@ const routes: Routes = [
                                                     {path:'politics', component:PoliticsComponent},
                                                     {path:'sports', component:SportsComponent},
                                                     {path:'travel', component:TravelComponent},
-  ]},
+                                                    {path:'index-inner', component:IndexInnerComponent},
+                                                    {path:'page_not_found', component:PageNotFoundComponent},
+                                                    {path:'contact', component:ContactusComponent},
+                                                  ]},
   {path: 'dashboard', component:DashboardComponent}
   
 ];
