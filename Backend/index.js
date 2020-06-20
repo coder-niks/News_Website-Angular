@@ -4,7 +4,7 @@ const cors  = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
-var client = new MongoClient('mongodb://localhost:27017/news', {useNewUrlParser:true})
+var client = new MongoClient('mongodb://localhost:27017/chatroom', {useNewUrlParser:true})
 
 var connection;
 client.connect((err, con)=>{
@@ -27,7 +27,7 @@ app.use(cors());
 
 app.post('/sign-up', bodyParser.json() ,(req,res)=>{  
 
-        const collection = connection.db('news').collection('users');
+        const collection = connection.db('chatroom').collection('users');
 
 
         collection.insert(req.body, (err,result)=>{
