@@ -13,6 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SportsComponent } from './sports/sports.component';
 import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -32,6 +34,8 @@ const routes: Routes = [
                                                     {path:'index-inner', component:IndexInnerComponent},
                                                     {path:'page_not_found', component:PageNotFoundComponent},
                                                     {path:'contact', component:ContactusComponent},
+                                                    {path:'login', component:LoginComponent},
+                                                    {path:'signup', component:SignupComponent},
                                                   ]},
   {path: 'dashboard', component:DashboardComponent}
   
