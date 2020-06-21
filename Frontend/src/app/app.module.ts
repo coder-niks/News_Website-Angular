@@ -22,6 +22,7 @@ import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SignupComponent } from './signup/signup.component';
     IndexInnerComponent,
     PageNotFoundComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
