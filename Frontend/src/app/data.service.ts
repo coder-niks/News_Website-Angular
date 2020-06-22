@@ -10,9 +10,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  signIn():any
+  login(data):any
   {
-    // return this.http.post(this.baseURL+"/sign-in", data);
-    return this.http.get(this.baseURL+"/home");
+    return this.http.post(this.baseURL+"/log-in", data);
   }
 }

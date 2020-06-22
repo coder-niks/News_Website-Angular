@@ -21,9 +21,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { CategoryComponent } from './category/category.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +39,7 @@ import { CategoryComponent } from './category/category.component';
     DashboardComponent,
     IndexInnerComponent,
     PageNotFoundComponent,
-    LoginComponent,
-    AdminDashboardComponent,
-    CategoryComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

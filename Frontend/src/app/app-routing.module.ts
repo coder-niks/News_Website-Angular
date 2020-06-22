@@ -14,9 +14,6 @@ import { SportsComponent } from './sports/sports.component';
 import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { CategoryComponent } from './category/category.component';
-
 
 
 const routes: Routes = [
@@ -37,10 +34,11 @@ const routes: Routes = [
                                                     {path:'contact', component:ContactusComponent},
                                                   
                                                   ]},
-  {path: 'admin-dashboard', component:LoginComponent, children:[
-                                                    {path:'login', component:AdminDashboardComponent}, 
-                                                    {path:'category', component:CategoryComponent},
-  ]}
+  {path: 'login', component:LoginComponent, children:[
+
+                                                    {path:'login', component:LoginComponent},
+                                                    
+                                                  ]}
   
 ];
 
