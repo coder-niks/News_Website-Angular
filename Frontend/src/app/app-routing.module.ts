@@ -21,7 +21,7 @@ const routes: Routes = [
                                                     {path:'art', component:ArtComponent},
                                                     {path:'business', component:BusinessComponent},
                                                     {path:'contactus', component:ContactusComponent},
-                                                    {path:'magazine', component:IndexInnerComponent},
+                                                    {path:'magazine', component:MagazineComponent},
                                                     {path:'politics', component:MagazineComponent},
                                                     {path:'sports', component:PoliticsComponent},
                                                     {path:'travel', component:TravelComponent},
