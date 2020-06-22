@@ -25,7 +25,7 @@ const app = express();
 
 
 app.use(cors());
-app.post('/log-in', bodyParser.json() ,(req,res)=>{ 
+app.post('/login', bodyParser.json() ,(req,res)=>{ 
 
 
 
