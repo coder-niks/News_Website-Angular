@@ -27,6 +27,7 @@ import { AdminCategoryComponent } from './admin-category/admin-category.componen
 import { AdminNewsComponent } from './admin-news/admin-news.component';
 import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
 import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.compo
     AdminNewsComponent,
     AdminMagazineComponent,
     AdminAdvertiseComponent,
+    AdminHeaderComponent,
    
   ],
   imports: [

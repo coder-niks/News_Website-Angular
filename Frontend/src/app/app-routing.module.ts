@@ -39,8 +39,8 @@ const routes: Routes = [
                                                     {path:'page_not_found', component:PageNotFoundComponent},
                                                     {path:'contact', component:ContactusComponent},
                                                   ]},
-  {path: '', component:AdminHomeComponent, children:[
-                                                        {path:'login', component:LoginComponent},
+  {path: 'login', component:LoginComponent, children:[
+                                                        
                                                         {path:'admin-home', component:AdminHomeComponent},
                                                         {path:'admin-news', component:AdminNewsComponent},
                                                         {path:'admin-category', component:AdminCategoryComponent},
