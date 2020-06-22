@@ -10,6 +10,12 @@ import { PoliticsComponent } from './politics/politics.component';
 import { TravelComponent } from './travel/travel.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SportsComponent } from './sports/sports.component';
+import { IndexInnerComponent } from './index-inner/index-inner.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
 
@@ -17,16 +23,22 @@ const routes: Routes = [
  
   {path: '', component:WebsiteComponent, children:[
                                                     {path:'', component:HomeComponent},
+                                                    {path:'home', component:HomeComponent},
                                                     {path:'about', component:AboutComponent},
                                                     {path:'art', component:ArtComponent},
                                                     {path:'business', component:BusinessComponent},
                                                     {path:'contactus', component:ContactusComponent},
                                                     {path:'magazine', component:MagazineComponent},
-                                                    {path:'politics', component:MagazineComponent},
-                                                    {path:'sports', component:PoliticsComponent},
+                                                    {path:'politics', component:PoliticsComponent},
+                                                    {path:'sports', component:SportsComponent},
                                                     {path:'travel', component:TravelComponent},
-  ]},
-  {path: 'dashboard', component:DashboardComponent}
+                                                    {path:'index-inner', component:IndexInnerComponent},
+                                                    {path:'page_not_found', component:PageNotFoundComponent},
+                                                    {path:'contact', component:ContactusComponent},
+                                                    {path:'login', component:LoginComponent},
+                                                    {path:'signup', component:SignupComponent},
+                                                  ]},
+  {path: 'admindashboard', component:AdminDashboardComponent}
   
 ];
 

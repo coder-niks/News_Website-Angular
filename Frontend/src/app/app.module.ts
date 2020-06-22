@@ -18,6 +18,11 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { IndexInnerComponent } from './index-inner/index-inner.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     HomeComponent,
     WebsiteComponent,
-    DashboardComponent
+    DashboardComponent,
+    IndexInnerComponent,
+    PageNotFoundComponent,
+    LoginComponent,
+    SignupComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,
