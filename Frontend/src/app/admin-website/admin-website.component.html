@@ -9,19 +9,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" routerLink="/admin-home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-category">Categories</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-category">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-news">Latest News</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-news">Latest News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-magazine">Magazine </a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-magazine">Magazine </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-advertise">Advertise</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-advertise">Advertise</a>
                 </li>
             </ul>
 
@@ -32,6 +32,10 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">Welcome to Admin Panel</h1>
+
+
+                <router-outlet></router-outlet>
+
      </div>
 </section>
 
