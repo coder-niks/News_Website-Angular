@@ -12,6 +12,6 @@ export class DataService {
 
   login(data):any
   {
-    return this.http.post(this.baseURL+"/log-in", data);
+    return this.http.post(this.baseURL+"/login", data);
   }
 }

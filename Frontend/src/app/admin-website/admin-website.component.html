@@ -2,36 +2,40 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" routerLink="/admin-home">WORLDTIME</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" routerLink="/admin-home">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-category">Categories</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-category">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-news">Latest News</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-news">Latest News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-magazine">Magazine </a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-magazine">Magazine </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin-advertise">Advertise</a>
+                    <a class="nav-link" routerLink="/admin-dashboard/admin-advertise">Advertise</a>
                 </li>
             </ul>
 
-            
+           
+    <nav>
+        <ul class="navbar-nav m-auto">
+          <li><button [routerLink]="['/home']">Logout</button></li>    
+        </ul>
+    </nav>
+      
         </div>
     </div>
 </nav>
 <section class="jumbotron text-center">
+        <router-outlet></router-outlet>
     <div class="container">
-        <h1 class="jumbotron-heading">Welcome to Admin Panel</h1>
      </div>
 </section>
 
@@ -75,10 +79,10 @@
                 <h5>Contact</h5>
                 <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-home mr-2"></i> My company</li>
-                    <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
-                    <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
-                    <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
+                    <li><i class="fa fa-home mr-2"></i> Aitechniques</li>
+                    <li><i class="fa fa-envelope mr-2"></i> nareshmali302@gmail.com</li>
+                    <li><i class="fa fa-phone mr-2"></i> +91 9251304304</li>
+                    <li><i class="fa fa-print mr-2"></i> +91 9251304304</li>
                 </ul>
             </div>
             <div class="col-12 copyright mt-3">
