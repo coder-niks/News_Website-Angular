@@ -14,9 +14,12 @@ import { SportsComponent } from './sports/sports.component';
 import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminNewsComponent } from './admin-news/admin-news.component';
+import { AdminCategoryComponent } from './admin-category/admin-category.component';
+import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
+import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
+import { AdminWebsiteComponent } from './admin-website/admin-website.component';
 
 
 const routes: Routes = [
@@ -35,11 +38,16 @@ const routes: Routes = [
                                                     {path:'index-inner', component:IndexInnerComponent},
                                                     {path:'page_not_found', component:PageNotFoundComponent},
                                                     {path:'contact', component:ContactusComponent},
-                                                    {path:'login', component:LoginComponent},
-                                                    {path:'signup', component:SignupComponent},
                                                   ]},
-  {path: 'admindashboard', component:AdminDashboardComponent}
-  
+  {path: 'login', component:LoginComponent, children:[
+                                                        
+                                                        {path:'admin-home', component:AdminHomeComponent},
+                                                        {path:'admin-news', component:AdminNewsComponent},
+                                                        {path:'admin-category', component:AdminCategoryComponent},
+                                                        {path:'admin-advertise', component:AdminAdvertiseComponent},
+                                                        {path:'admin-magazine', component:AdminMagazineComponent},                                                  
+                                                      ]}
+
 ];
 
 @NgModule({

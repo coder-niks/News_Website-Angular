@@ -1,48 +1,43 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Create Account</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			 <button>Sign Up </button>>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Sign in</h1>
-			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn">Sign In</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Hello, User!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
-			</div>
-		</div>
-	</div>
+<div class="wrapper dark-header">
+  <header class="main-header">
+    <div class="logo"><a href="index.html" >WORLDTIME</a></div>
+    <div class="navbar navbar-static-top">
+      <div class="btn-grps pull-right">
+        <a class="pink-btn dark-btn" href="#">Main Page</a>
+        <a href="#" class="pink-btn">Admin Login</a>
+      </div>
+    </div>
+
+  </header>
+  <section class="login-inner">
+    <div class="login-middle">
+      <div class="login-details">
+        <form #f="ngForm">
+          <h2>Log In</h2>
+          <label>
+              <input type="email" class="form-control"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Username or Email" id="email" required>
+          </label>
+          <label>
+              <input type="password" class="form-control"  [(ngModel)]="passwordProp" [ngModelOptions]="{standalone: true}" placeholder="Password" id="pwd" required>
+          </label>
+          <label>
+            <input type="checkbox"/><span>Remember me</span>
+          </label>
+          <div class="btn-sub">
+            <button (click)="login()" class="pink-btn">Log In</button>
+            <span>
+              <a href="#">Forget your password?</a>
+            </span>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
 </div>
-

@@ -21,8 +21,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { IndexInnerComponent } from './index-inner/index-inner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminWebsiteComponent } from './admin-website/admin-website.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminCategoryComponent } from './admin-category/admin-category.component';
+import { AdminNewsComponent } from './admin-news/admin-news.component';
+import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
+import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +48,14 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     IndexInnerComponent,
     PageNotFoundComponent,
     LoginComponent,
-    SignupComponent,
-    AdminDashboardComponent
+    AdminWebsiteComponent,
+    AdminHomeComponent,
+    AdminCategoryComponent,
+    AdminNewsComponent,
+    AdminMagazineComponent,
+    AdminAdvertiseComponent,
+    AdminHeaderComponent,
+   
   ],
   imports: [
     BrowserModule,
