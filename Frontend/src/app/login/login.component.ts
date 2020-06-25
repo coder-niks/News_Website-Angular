@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
 
   login()
   {
+
     alert("in login ");
       this.ds.login({email:this.emailProp, password:this.passwordProp})
       .subscribe((response)=>{

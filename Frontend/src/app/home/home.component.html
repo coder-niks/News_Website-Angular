@@ -662,3 +662,13 @@
     </div>
   </div>
 </div>
+
+
+<div *ngFor="let n of newsList">
+  {{n.source | json}} <br>
+  {{n.author}} <br>
+  {{n.title}} <br>
+  {{n.description}} <br>
+  <img height="300px" width="500px" [src]="n.urlToImage" alt="">
+</div>
+

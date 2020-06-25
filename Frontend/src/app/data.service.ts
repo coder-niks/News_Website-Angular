@@ -14,4 +14,13 @@ export class DataService {
   {
     return this.http.post(this.baseURL+"/login", data);
   }
+
+
+  fetchNews(cat):any
+  {
+    alert('http://newsapi.org/v2/top-headlines?country=in&category='+cat+'&apiKey=50f9a005636a4e9590ead4a2063e99de')
+    return this.http.get('http://newsapi.org/v2/top-headlines?country=in&category='+cat+'&apiKey=50f9a005636a4e9590ead4a2063e99de');
+  }
+
+
 }
