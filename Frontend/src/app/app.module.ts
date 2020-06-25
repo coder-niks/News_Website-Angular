@@ -4,6 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ArtComponent } from './art/art.component';
@@ -28,6 +32,7 @@ import { AdminNewsComponent } from './admin-news/admin-news.component';
 import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
 import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -55,13 +60,15 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
     AdminMagazineComponent,
     AdminAdvertiseComponent,
     AdminHeaderComponent,
+    SignupComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
