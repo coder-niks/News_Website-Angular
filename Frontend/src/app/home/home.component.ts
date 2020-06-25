@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     this.ds.fetchNews('business').subscribe((n)=>{
         this.newsList = n.articles;
     })
+   
   }
 
 }

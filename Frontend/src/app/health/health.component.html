@@ -1,0 +1,28 @@
+<div class="content-wrapper">
+    <div class="container">
+      <div class="col-sm-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1 class="font-weight-600 mb-4">
+                  HEALTH
+                </h1>
+              </div>
+            </div>
+
+            <div *ngFor="let n of newsList">
+              <img height="150px" width="250px" [src]="n.urlToImage" alt="">
+              {{n.source | json}} <br>
+              {{n.author}} <br>
+              {{n.title}} <br>
+              {{n.description}} <br>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- main-panel ends -->
+  

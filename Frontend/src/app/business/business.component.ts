@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-business',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business.component.css']
 })
 export class BusinessComponent implements OnInit {
-
-  constructor() { }
+  newsList;
+  constructor(private ds:DataService) { }
 
   ngOnInit(): void {
+
+    this.ds.fetchNews('business').subscribe((n)=>{
+        this.newsList = n.articles;
+    })
   }
 
 }

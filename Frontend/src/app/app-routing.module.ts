@@ -21,6 +21,10 @@ import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.compo
 import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
 import { AdminWebsiteComponent } from './admin-website/admin-website.component';
 import { SignupComponent } from './signup/signup.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { HealthComponent } from './health/health.component';
+import { ScienceComponent } from './science/science.component';
+import { TechnologyComponent } from './technology/technology.component';
 
 
 const routes: Routes = [
@@ -39,6 +43,11 @@ const routes: Routes = [
                                                     {path:'index-inner', component:IndexInnerComponent},
                                                     {path:'page_not_found', component:PageNotFoundComponent},
                                                     {path:'contact', component:ContactusComponent},
+                                                    {path:'entertainment', component:EntertainmentComponent},
+                                                    {path:'health', component:HealthComponent},
+                                                    {path:'science', component:ScienceComponent},
+                                                    {path:'technology', component:TechnologyComponent},
+
                                                   ]},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},

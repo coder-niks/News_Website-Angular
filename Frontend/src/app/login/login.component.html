@@ -20,14 +20,9 @@
         <form #f="ngForm">
           <h2>Log In</h2>
           <label>
-<<<<<<< HEAD
-              <input #emailRef="ngModel" type="email" class="form-control" name="email"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Username or Email" id="email" required>
-              <span *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
-           
-=======
               <input #emailRef="ngModel" type="email" class="form-control" name="email"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
               <span *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
->>>>>>> 7d6ee418a3dd61b95c677b81813af77583530963
+
             </label>
           <label>
               <input  #passRef="ngModel" type="password" class="form-control" name="password"   [(ngModel)]="passwordProp" [ngModelOptions]="{standalone: true}" placeholder="Password" id="pwd" pattern="^[0-9a-z]{8,12}$" required minlength="8">

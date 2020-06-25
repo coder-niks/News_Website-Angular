@@ -13,6 +13,7 @@ export class WebsiteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
   ngAfterViewInit()
