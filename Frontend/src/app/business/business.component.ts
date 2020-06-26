@@ -16,5 +16,12 @@ export class BusinessComponent implements OnInit {
         this.newsList = n.articles;
     })
   }
+  fetchNews(cat)
+  {
+    this.ds.fetchNews(cat).subscribe((n)=>{
+      this.newsList = n.articles;
+  })
+  }
+
 
 }
