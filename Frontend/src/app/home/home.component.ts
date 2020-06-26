@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.ds.fetchNews('business').subscribe((n)=>{
+    this.ds.googleNews('google-news-in').subscribe((n)=>{
         this.newsList = n.articles;
     })
    
