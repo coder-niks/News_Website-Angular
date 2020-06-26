@@ -19,4 +19,11 @@ export class HomeComponent implements OnInit {
    
   }
 
+  fetchNews(cat)
+  {
+    this.ds.fetchNews(cat).subscribe((n)=>{
+      this.newsList = n.articles;
+  })
+  }
+
 }
