@@ -1,20 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
-import { ArtComponent } from './art/art.component';
 import { BusinessComponent } from './business/business.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { MagazineComponent } from './magazine/magazine.component';
-import { PoliticsComponent } from './politics/politics.component';
 import { SportsComponent } from './sports/sports.component';
 import { TravelComponent } from './travel/travel.component';
 import { FooterComponent } from './footer/footer.component';
@@ -36,16 +29,14 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ArtComponent,
     BusinessComponent,
     ContactusComponent,
-    MagazineComponent,
-    PoliticsComponent,
     SportsComponent,
     TravelComponent,
     FooterComponent,
@@ -67,6 +58,7 @@ import { TechnologyComponent } from './technology/technology.component';
     HealthComponent,
     ScienceComponent,
     TechnologyComponent,
+    BitcoinComponent,
    
   ],
   imports: [

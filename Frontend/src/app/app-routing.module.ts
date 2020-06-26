@@ -1,12 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ArtComponent } from './art/art.component';
 import { BusinessComponent } from './business/business.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { MagazineComponent } from './magazine/magazine.component';
-import { PoliticsComponent } from './politics/politics.component';
 import { TravelComponent } from './travel/travel.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,6 +22,7 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { BitcoinComponent } from './bitcoin/bitcoin.component';
 
 
 const routes: Routes = [
@@ -33,11 +31,8 @@ const routes: Routes = [
                                                     {path:'', component:HomeComponent},
                                                     {path:'home', component:HomeComponent},
                                                     {path:'about', component:AboutComponent},
-                                                    {path:'art', component:ArtComponent},
                                                     {path:'business', component:BusinessComponent},
                                                     {path:'contactus', component:ContactusComponent},
-                                                    {path:'magazine', component:MagazineComponent},
-                                                    {path:'politics', component:PoliticsComponent},
                                                     {path:'sports', component:SportsComponent},
                                                     {path:'travel', component:TravelComponent},
                                                     {path:'index-inner', component:IndexInnerComponent},
@@ -47,7 +42,7 @@ const routes: Routes = [
                                                     {path:'health', component:HealthComponent},
                                                     {path:'science', component:ScienceComponent},
                                                     {path:'technology', component:TechnologyComponent},
-
+                                                    {path:'bitcoin', component:BitcoinComponent},
                                                   ]},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
