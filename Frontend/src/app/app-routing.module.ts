@@ -25,8 +25,7 @@ import { TechnologyComponent } from './technology/technology.component';
 import { BitcoinComponent } from './bitcoin/bitcoin.component';
 
 
-const routes: Routes = [
- 
+const routes:Routes = [
   {path: '', component:WebsiteComponent, children:[
                                                     {path:'', component:HomeComponent},
                                                     {path:'home', component:HomeComponent},
@@ -43,7 +42,7 @@ const routes: Routes = [
                                                     {path:'science', component:ScienceComponent},
                                                     {path:'technology', component:TechnologyComponent},
                                                     {path:'bitcoin', component:BitcoinComponent},
-                                                  ]},
+  ]},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
   {path:'admin-dashboard',component:AdminWebsiteComponent, children:[
