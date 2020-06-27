@@ -1,41 +1,81 @@
-<form [formGroup]="myForm">
-    <input type="text" formControlName="email" placeholder="email" >
-    <span *ngIf="myForm.get('email').invalid" >it is required</span> <br>
-   
-   
-    <div formGroupName="passMatch">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-            <input placeholder="password" type="text" formControlName="password">
-            <div *ngIf="myForm.get('passMatch').get('password').errors">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
 
-                <span *ngIf="myForm.get('passMatch').get('password').touched && myForm.get('passMatch').get('password').errors.required" > this a required field </span>
-                <span *ngIf="myForm.get('passMatch').get('password').touched && myForm.get('passMatch').get('password').errors.minlength" > minimum length should be 8 charcters </span>
-            
-            </div> <br>
-            <input type="text" formControlName="cpassword" placeholder="confirm password">
-            <div *ngIf="myForm.get('passMatch').get('cpassword').errors">
 
-                <span *ngIf="myForm.get('passMatch').get('cpassword').touched && myForm.get('passMatch').get('cpassword').errors.required" > this a required field </span>
-            
-            </div><br>
+<div class="one">
+  <div class="two">
+      <p class="p1">Get your free account</p>
+        <form #f="ngForm" ngNativeValidate>
+          <div class="form-group">
+            <input type="name" class="form-control" [(ngModel)]="nameProp" [ngModelOptions]="{standalone: true}" placeholder="FullName" id="name" required>
+           
+          </div>
+          <div class="form-group">
+              <input  #emailRef="ngModel" type="email" class="form-control"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
+              <span *ngIf="emailRef.touched && emailRef.invalid" > this is a required field </span>
+            </div>
+            <div class="form-group">
+              <input #mobileRef="ngModel" type="number" class="form-control"  [(ngModel)]="mobileNoProp" [ngModelOptions]="{standalone: true}" placeholder="Mobile Number" id="mobNo" required minlength="8">
+              <div *ngIf="mobileRef.errors">
+              <span *ngIf="mobileRef.touched && mobileRef.errors.required" > this a required field </span>
+              <span *ngIf="mobileRef.touched && mobileRef.errors.minlength" > minimum length should be 8 charcters </span>
+              </div>
+            </div>
+          <div class="form-group">
+            <input #passRef="ngModel"  type="password" [(ngModel)]="passwordProp"  [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Password" id="pwd" pattern="^[0-9a-z]{8,12}$" required minlength="8">
+            <div *ngIf="passRef.errors">
+
+              <span *ngIf="passRef.touched && passRef.errors.required" > this a required field </span>
+              <span *ngIf="passRef.touched && passRef.errors.minlength" > minimum length should be 8 charcters </span>
+              <span *ngIf="passRef.touched && passRef.errors.pattern" > min 8, max 12, numeric and small letter only </span>
+  
+          </div>
+          </div>
+          <div class="form-group">
+              <input type="confirmPassword" class="form-control"  [(ngModel)]="confirmPassProp" [ngModelOptions]="{standalone: true}" placeholder="Confirm Password" id="confirmPwd">
+            </div>
+          <button type="submit" class="btn btn-success" (click)="signUP()" >Register</button>
+        </form>
+  </div>
+</div>
+
+
+
+<!-- 
+<form #f="ngForm">
+<h2>Log In</h2>
+<label>
+    <input #emailRef="ngModel" type="email" class="form-control" name="email"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Username or Email" id="email" required>
+    <span *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
+  </label>
+<label>
+    <input  #passRef="ngModel" type="password" class="form-control" name="password"   [(ngModel)]="passwordProp" [ngModelOptions]="{standalone: true}" placeholder="Password" id="pwd" pattern="^[0-9a-z]{8,12}$" required minlength="8">
+    <div *ngIf="passRef.errors">
+
+        <span *ngIf="passRef.touched && passRef.errors.required" > this a required field </span>
+        <span *ngIf="passRef.touched && passRef.errors.minlength" > minimum length should be 8 charcters </span>
+        <span *ngIf="passRef.touched && passRef.errors.pattern" > min 8, max 12, numeric and small letter only </span>
+
+
     </div>
-    <span *ngIf="myForm.get('passMatch').invalid"> password did not match </span>
 
 
+  </label>
+<label>
+  <input type="checkbox"/><span>Remember me</span>
+</label>
+<div class="btn-sub">
+  <button (click)="login()" class="pink-btn">Log In</button>
+  <span>
+    <a href="#">Forget your password?</a>
+  </span>
+</div>
 
-
-    <input type="text" formControlName="srName" placeholder="sr name">
-    <span *ngIf="myForm.get('srName').invalid" >not a valid sr name</span>
-
-</form>
-
-<div #fff > Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium nisi quaerat debitis? Reiciendis eum neque explicabo tempore? Molestias, tenetur? Quae repellat optio consectetur quasi deserunt unde temporibus veritatis doloribus error?  </div>
-<button (click)="changeColor()">click me</button>
-
-<ng-content>
-
-    
-</ng-content>
-
-
-
+</form> -->

@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -7,62 +8,53 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
-  myForm:FormGroup;
-  @ViewChild('fff') myDiv;
-
-  constructor(private fb:FormBuilder) { }
+  
+  nameProp="";
+  emailProp="";
+  passwordProp="";
+  mobileNoProp="";
+  confirmPassProp="";
+  constructor(private ds:DataService, private router:Router) { }
 
   ngOnInit(): void {
+   
+  }
 
-    this.myForm = this.fb.group({
-      email:['', Validators.required],
-      passMatch: this.fb.group({
-        password:['', [Validators.required, Validators.minLength(8)]],
-        cpassword: ['', Validators.required]
-      }, {validator:this.passMatchValidation }),     
+  signUP()
+  { var acFound=false;
+    if(this.nameProp!="" && this.emailProp!="" && this.passwordProp!="" && this.mobileNoProp!=""){
+    this.ds.signIn()
+    .subscribe((response)=>{
+      if(response.status=="ok")
+      {
 
-      srName:['',this.myValidation ]
-
+        response.data.forEach(element => {
+          if(element.email==this.emailProp){
+        
+            console.log(element.email,this.emailProp)
+          acFound=true
+          }
+        
+        });
+      }
+      if(acFound){
+        alert("Account Already Exist")
+      }
+      else{
+             this.ds.signUp({name:this.nameProp, email:this.emailProp, password:this.passwordProp ,phone:this.mobileNoProp})
+        .subscribe((response)=>{
+          if(response.status=="ok")
+          {
+              alert("Sign Up Successfull you will be redirected to sign in ");
+              this.router.navigate(['/login']);
+          }
+        })
+      }
     })
-
   }
-
-  myValidation( ele:AbstractControl ) : { [key:string]: any} | null
-  {
-    var value = ele.value;
-
-    if(value == "joshi")
-    {
-        return null;
-    }
-    else{
-        return { "srname": true }
-    }
-
+  else{
+    alert("fill all filds!")
   }
-
-  passMatchValidation ( ele:AbstractControl ) : { [key:string]: any} | null
-  {
-    var value = ele.get('password').value;
-    var value2 = ele.get('cpassword').value;
-
-    if(value == value2)
-    {
-        return null;
-    }
-    else{
-        return { "passMatch": true }
-    }
-
-  }
-
-
-  changeColor()
-  {
-      // alert("sdfgd");
-      this.myDiv.nativeElement.style.backgroundColor= "red";
-  }
-
-
+  
+}
 }

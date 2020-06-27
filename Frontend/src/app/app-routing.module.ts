@@ -23,6 +23,7 @@ import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { BitcoinComponent } from './bitcoin/bitcoin.component';
+import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
 
 
 const routes:Routes = [
@@ -42,6 +43,7 @@ const routes:Routes = [
                                                     {path:'science', component:ScienceComponent},
                                                     {path:'technology', component:TechnologyComponent},
                                                     {path:'bitcoin', component:BitcoinComponent},
+                                                    {path:'newsdetails', component:NewsdetailsComponent},
   ]},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},

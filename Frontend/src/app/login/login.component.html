@@ -6,12 +6,6 @@
 <div class="wrapper dark-header">
   <header class="main-header">
     <div class="logo"><a href="index.html" >WORLDTIME</a></div>
-    <div class="navbar navbar-static-top">
-      <div class="btn-grps pull-right">
-        <a class="pink-btn dark-btn" href="#">Main Page</a>
-        <a href="#" class="pink-btn">Admin Login</a>
-      </div>
-    </div>
 
   </header>
   <section class="login-inner">
@@ -41,13 +35,17 @@
             <input type="checkbox"/><span>Remember me</span>
           </label>
           <div class="btn-sub">
-            <button (click)="login()" class="pink-btn">Log In</button>
+            <button (click)="signin()" class="pink-btn">Log In</button>
             <span>
-              <a href="#">Forget your password?</a>
+              <a href="#">Forget your password?</a><br><br>
             </span>
           </div>
-
+          <div class="btn-sub">
+            <p class="p2">New User</p>
+            <button  routerLink="/signup" type="submit" class="pink-btn" id="signup" >Sign Up</button>
+          </div>
         </form>
+          
       </div>
     </div>
   </section>
