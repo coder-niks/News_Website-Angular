@@ -9,7 +9,6 @@ import { AboutComponent } from './about/about.component';
 import { BusinessComponent } from './business/business.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SportsComponent } from './sports/sports.component';
-import { TravelComponent } from './travel/travel.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -39,7 +38,6 @@ import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
     BusinessComponent,
     ContactusComponent,
     SportsComponent,
-    TravelComponent,
     FooterComponent,
     HeaderComponent,
     HomeComponent,

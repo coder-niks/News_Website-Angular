@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BusinessComponent } from './business/business.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { TravelComponent } from './travel/travel.component';
 import { WebsiteComponent } from './website/website.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SportsComponent } from './sports/sports.component';
@@ -34,7 +33,6 @@ const routes:Routes = [
                                                     {path:'business', component:BusinessComponent},
                                                     {path:'contactus', component:ContactusComponent},
                                                     {path:'sports', component:SportsComponent},
-                                                    {path:'travel', component:TravelComponent},
                                                     {path:'index-inner', component:IndexInnerComponent},
                                                     {path:'page_not_found', component:PageNotFoundComponent},
                                                     {path:'contact', component:ContactusComponent},

@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
         this.newsList = n.articles;
     })
    
+   
   }
 
   fetchNews(cat)
