@@ -10,19 +10,15 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-
-  signUp(data):any
+  login(data):any
   {
-    return this.http.post(this.baseURL+"/sign-up", data);
+    return this.http.post(this.baseURL+"/login", data);
+  }
+  submit(d):any
+  {
+    return this.http.post('http://localhost:3000/submit', d);
   }
 
-  signIn():any
-  {
-    // return this.http.post(this.baseURL+"/sign-in", data);
-    return this.http.get(this.baseURL+"/sign-up");
-  }
-
-  
 
 
   fetchNews(cat):any

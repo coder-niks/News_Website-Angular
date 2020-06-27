@@ -16,7 +16,6 @@ import { AdminCategoryComponent } from './admin-category/admin-category.componen
 import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
 import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
 import { AdminWebsiteComponent } from './admin-website/admin-website.component';
-import { SignupComponent } from './signup/signup.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
@@ -42,9 +41,8 @@ const routes:Routes = [
                                                     {path:'technology', component:TechnologyComponent},
                                                     {path:'bitcoin', component:BitcoinComponent},
                                                     {path:'newsdetails', component:NewsdetailsComponent},
+                                                    {path: 'login', component:LoginComponent},
   ]},
-  {path: 'login', component:LoginComponent},
-  {path: 'signup', component:SignupComponent},
   {path:'admin-dashboard',component:AdminWebsiteComponent, children:[
                                                         
                                                         {path:'admin-home', component:AdminHomeComponent},

@@ -1,0 +1,6 @@
+.carousel-item {
+    height: 80vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+}
+

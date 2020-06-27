@@ -1,53 +1,44 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card" data-aos="fade-up">
+          <div class="card-body">
+            <div class="aboutus-wrapper">
+              <h2>Log In</h2> <br>
+              <div class="row">
+                <div class="col-lg-12 mb-5 mb-sm-2">
+                  <form ngNativeValidate #f="ngForm">
+                    <div class="form-group" >
+                      <input #emailRef="ngModel" type="email" class="form-control" name="email"    [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
+                      <span style="color:red;" *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
+                    </div>
+                    <div class="form-group">
+                      <input #passRef="ngModel" type="password" class="form-control"  name="password"  [(ngModel)]="passwordProp" [ngModelOptions]="{standalone: true}" placeholder="Password" id="pwd"pattern="^[0-9a-z]{8,12}$" required minlength="8">
+                      <div style="color:red;" *ngIf="passRef.errors" >
 
-<div class="wrapper dark-header">
-  <header class="main-header">
-    <div class="logo"><a href="index.html" >WORLDTIME</a></div>
-
-  </header>
-  <section class="login-inner">
-    <div class="login-middle">
-      <div class="login-details">
-        <form #f="ngForm">
-          <h2>Log In</h2>
-          <label>
-              <input #emailRef="ngModel" type="email" class="form-control" name="email"  [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
-              <span *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
-
-            </label>
-          <label>
-              <input  #passRef="ngModel" type="password" class="form-control" name="password"   [(ngModel)]="passwordProp" [ngModelOptions]="{standalone: true}" placeholder="Password" id="pwd" pattern="^[0-9a-z]{8,12}$" required minlength="8">
-              <div *ngIf="passRef.errors">
-
-                  <span *ngIf="passRef.touched && passRef.errors.required" > this a required field </span>
-                  <span *ngIf="passRef.touched && passRef.errors.minlength" > minimum length should be 8 charcters </span>
-                  <span *ngIf="passRef.touched && passRef.errors.pattern" > min 8, max 12, numeric and small letter only </span>
-
-
+                        <span *ngIf="passRef.touched && passRef.errors.required"> this a required field </span>
+                        <span *ngIf="passRef.touched && passRef.errors.minlength" > minimum length should be 8 charcters </span>
+                        <span *ngIf="passRef.touched && passRef.errors.pattern" > min 8, max 12, numeric and small letter only </span>
+      
+      
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                          <button (click)="login()" class="btn btn-lg btn-dark font-weight-bold mt-3">Log In</button> 
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
-
-
-            </label>
-          <label>
-            <input type="checkbox"/><span>Remember me</span>
-          </label>
-          <div class="btn-sub">
-            <button (click)="signin()" class="pink-btn">Log In</button>
-            <span>
-              <a href="#">Forget your password?</a><br><br>
-            </span>
+            </div>
           </div>
-          <div class="btn-sub">
-            <p class="p2">New User</p>
-            <button  routerLink="/signup" type="submit" class="pink-btn" id="signup" >Sign Up</button>
-          </div>
-        </form>
-          
+        </div>
       </div>
     </div>
-  </section>
-
+  </div>
 </div>
+<!-- container-scroller ends -->

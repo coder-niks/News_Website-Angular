@@ -1,5 +1,6 @@
 <footer>
   <div class="footer-top">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="container">
       <div class="row">
         <div class="col-sm-5">
@@ -8,73 +9,36 @@
             The Newsprism offers authoritative insight and opinion on international
              news, politics, business, finance, science and technology etc.
           </h5>
-         
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
         </div>
         <div class="col-sm-4">
           <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
           <div class="row">
             <div class="col-sm-12">
               <div class="footer-border-bottom pb-2">
-                <div class="row">
+                <div class="row" *ngFor="let n of newsList | slice:0:4; let i=index">
                   <div class="col-3">
                     <img
-                      src="assets/images/dashboard/home_1.jpg"
+                      src="{{n.urlToImage}}"
                       alt="thumb"
                       class="img-fluid"
                     />
                   </div>
                   <div class="col-9">
                     <h5 class="font-weight-600">
-                      Cotton import from USA to soar was American traders
-                      predict
+                      {{n.title}}
                     </h5>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="footer-border-bottom pb-2 pt-2">
-                <div class="row">
-                  <div class="col-3">
-                    <img
-                      src="assets/images/dashboard/home_2.jpg"
-                      alt="thumb"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="col-9">
-                    <h5 class="font-weight-600">
-                      Cotton import from USA to soar was American traders
-                      predict
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12">
-              <div>
-                <div class="row">
-                  <div class="col-3">
-                    <img
-                      src="assets/images/dashboard/home_3.jpg"
-                      alt="thumb"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="col-9">
-                    <h5 class="font-weight-600 mb-3">
-                      Cotton import from USA to soar was American traders
-                      predict
-                    </h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         <div class="col-sm-3">
           <h3 class="font-weight-bold mb-3">CATEGORIES</h3>
@@ -127,7 +91,7 @@
               © 2020 @ <a routerlink="/home" target="_blank" class="text-white"> Newsprism</a>. All rights reserved.
             </div>
             <div class="fs-14 font-weight-600">
-              Designed by <a href="/home" target="_blank" class="text-white">Techno Buddies</a>
+              Designed by <a href="https://in.linkedin.com/in/naresh-mali-b56513116" target="_blank" class="text-white">Naresh Mali</a>
             </div>
           </div>
         </div>

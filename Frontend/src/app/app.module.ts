@@ -23,7 +23,6 @@ import { AdminCategoryComponent } from './admin-category/admin-category.componen
 import { AdminNewsComponent } from './admin-news/admin-news.component';
 import { AdminMagazineComponent } from './admin-magazine/admin-magazine.component';
 import { AdminAdvertiseComponent } from './admin-advertise/admin-advertise.component';
-import { SignupComponent } from './signup/signup.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
@@ -52,7 +51,6 @@ import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
     AdminNewsComponent,
     AdminMagazineComponent,
     AdminAdvertiseComponent,
-    SignupComponent,
     EntertainmentComponent,
     HealthComponent,
     ScienceComponent,

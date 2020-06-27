@@ -16,8 +16,6 @@ export class HomeComponent implements OnInit {
     this.ds.googleNews('google-news-in').subscribe((n)=>{
         this.newsList = n.articles;
     })
-   
-   
   }
 
   fetchNews(cat)

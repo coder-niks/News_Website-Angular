@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  newsList;
+  constructor(private ds:DataService) { }
 
   ngOnInit(): void {
-  }
 
+    this.ds.googleNews('google-news-in').subscribe((n)=>{
+        this.newsList = n.articles;
+    })
+  }
 }
