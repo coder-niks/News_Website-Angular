@@ -15,7 +15,7 @@
         <div class="card bg-dark text-white">
           <div class="card-body">
             <h2>Latest news</h2>
-            <div  *ngFor="let n of newsList" 
+            <div  *ngFor="let n of newsList | slice:0:3; let i=index" 
               class="d-flex border-bottom-blue pb-4 pt-4 align-items-center justify-content-between">
               <div class="pr-3">
                 <h5> {{n.title}} </h5>
