@@ -27,7 +27,6 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { TechnologyComponent } from './technology/technology.component';
-import { BitcoinComponent } from './bitcoin/bitcoin.component';
 import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
 
 @NgModule({
@@ -55,7 +54,6 @@ import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
     HealthComponent,
     ScienceComponent,
     TechnologyComponent,
-    BitcoinComponent,
     NewsdetailsComponent,
    
   ],

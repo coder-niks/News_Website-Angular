@@ -32,9 +32,5 @@ export class DataService {
     
     return this.http.get('http://newsapi.org/v2/top-headlines?sources='+src+'&apiKey=50f9a005636a4e9590ead4a2063e99de');
   }
-  bitcoinNews(q):any
-  {
-    
-    return this.http.get('http://newsapi.org/v2/everything?q='+q+'&from=2020-05-26&sortBy=publishedAt&apiKey=50f9a005636a4e9590ead4a2063e99de');
-  }
+ 
 }
