@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../data.service';
 
 declare var $:any;
 declare var AOS:any;
@@ -10,11 +10,20 @@ declare var AOS:any;
 })
 export class WebsiteComponent implements OnInit {
 
-  constructor() { }
+  today: number = Date.now();
+  newsList;
+ 
+  constructor(private ds:DataService) { }
 
   ngOnInit(): void {
-   
+
+    this.ds.googleNews('google-news-in').subscribe((n)=>{
+        this.newsList = n.articles;
+    })
   }
+  
+  
+
 
   ngAfterViewInit()
   {
@@ -86,5 +95,6 @@ export class WebsiteComponent implements OnInit {
     });
     
   }
+  
 
 }

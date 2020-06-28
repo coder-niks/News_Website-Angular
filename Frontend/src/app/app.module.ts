@@ -27,7 +27,6 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
 import { HealthComponent } from './health/health.component';
 import { ScienceComponent } from './science/science.component';
 import { TechnologyComponent } from './technology/technology.component';
-import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +53,6 @@ import { NewsdetailsComponent } from './newsdetails/newsdetails.component';
     HealthComponent,
     ScienceComponent,
     TechnologyComponent,
-    NewsdetailsComponent,
    
   ],
   imports: [
