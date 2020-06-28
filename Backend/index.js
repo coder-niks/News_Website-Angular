@@ -42,35 +42,25 @@ app.post('/login', bodyParser.json() ,(req,res)=>{
         }
     })
 
-    });
-    
-    app.post('/submit', bodyParser.json(), (req, res) => {
+    })
+    app.post('/submit', bodyParser.json() ,(req,res)=>{ 
 
-        console.log("sign up for user..")
-        console.log(req.body);
+
+
+        const collection = connection.db('newsdb').collection('enquiry');
     
-        var collection = connection.db(newsdb).collection('enquiry');
     
-        collection.find({ email: req.body.email }).toArray((err, docs) => {
-            console.log("found with this email ");
-            console.log(docs);
-    
-            if (!err && docs.length > 0) {
-                res.send({ status: "failed", data: "email already Exist" })
+        collection.insert(req.body, (err, result) => {
+            if (!err) {
+                res.send({ status: "ok", data: "Message Submitted" });
             } else {
-    
-                collection.insert(req.body, (err, result) => {
-                    if (!err) {
-                        res.send({ status: "ok", data: "signup success" });
-                    } else {
-                        res.send({ status: "failed", data: err });
-                    }
-                })
-    
+                res.send({ status: "failed", data: err });
             }
         })
     
-    })
+        })
+    
+   
 
 app.listen(3000, ()=>{
     console.log("Server is listening on port 3000");

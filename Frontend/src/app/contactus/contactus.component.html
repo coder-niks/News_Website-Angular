@@ -6,27 +6,32 @@
           <div class="card-body">
             <div class="aboutus-wrapper">
               <h1 class="mt-5 text-center mb-5">
-                Contact Us
+                Contact
               </h1>
               <div class="row">
                 <div class="col-lg-12 mb-5 mb-sm-2">
                   <form #f="ngForm">
-                    <div class="form-group">
-                        <!-- <label for="email">Email address:</label> -->
-                        <input #nameref="ngModel" [(ngModel)]="nameProp" name="name" type="text" class="form-control" placeholder="Enter name" id="name">
+                    <div class="form-group" >
+                      <input #emailRef="ngModel" type="email" class="form-control" name="email"    [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
+                      <span style="color:red;" *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="email">Email address:</label> -->
-                        <input #emailref="ngModel" [(ngModel)]="emailProp" name="email" type="email" class="form-control" placeholder="Enter email" id="email">
+                      <input #nameRef="ngModel" type="name" class="form-control"  name="name"  [(ngModel)]="nameProp" [ngModelOptions]="{standalone: true}" placeholder="Name" id="name" required>
+                      <span style="color:red;" *ngIf="nameRef.touched && nameRef.invalid" > this a required field </span>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="pwd">Password:</label> -->
-                        <textarea #messageref="ngModel" [(ngModel)]="messageProp" name="message" type="message" class="form-control" placeholder="Comment.." id="exampleFormControlTextarea1" rows="5"></textarea>
+                      <textarea #messageref="ngModel" type="message" class="form-control" name="message" [(ngModel)]="messageProp"  [ngModelOptions]="{standalone: true}" placeholder="message" id="message" required></textarea>
+                      <span style="color:red;" *ngIf="nameRef.touched && nameRef.invalid" > this a required field </span>
                     </div>
-                    <p></p>
-                    <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
-    
-                </form>
+                 
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="form-group">
+                          <button (click)="submit()" class="btn btn-lg btn-dark font-weight-bold mt-3">Submit</button> 
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

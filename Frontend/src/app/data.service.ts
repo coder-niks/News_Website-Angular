@@ -14,9 +14,9 @@ export class DataService {
   {
     return this.http.post(this.baseURL+"/login", data);
   }
-  submit(d):any
+  submit(data):any
   {
-    return this.http.post('http://localhost:3000/submit', d);
+    return this.http.post(this.baseURL+"/submit", data);
   }
 
 

@@ -5,10 +5,12 @@
         <div class="card" data-aos="fade-up">
           <div class="card-body">
             <div class="aboutus-wrapper">
-              <h2>Log In</h2> <br>
+              <h1 class="mt-5 text-center mb-5">
+                Login
+              </h1>
               <div class="row">
                 <div class="col-lg-12 mb-5 mb-sm-2">
-                  <form ngNativeValidate #f="ngForm">
+                  <form  #f="ngForm">
                     <div class="form-group" >
                       <input #emailRef="ngModel" type="email" class="form-control" name="email"    [(ngModel)]="emailProp" [ngModelOptions]="{standalone: true}" placeholder="Email" id="email" required>
                       <span style="color:red;" *ngIf="emailRef.touched && emailRef.invalid" > this a required field </span>
@@ -24,10 +26,13 @@
       
                     </div>
                     </div>
+                        
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="form-group">
-                          <button (click)="login()" class="btn btn-lg btn-dark font-weight-bold mt-3">Log In</button> 
+                          <input type="submit" (click)="login()" value="Submit" class="btn btn-lg btn-dark font-weight-bold mt-3">
+                          
+                           
                         </div>
                       </div>
                     </div>
