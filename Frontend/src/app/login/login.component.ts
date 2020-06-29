@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
 
   login()
   {
-
-    
+      if(this.emailProp)
+      {
       this.ds.login({email:this.emailProp, password:this.passwordProp})
       .subscribe((response)=>{
         alert(JSON.stringify(response));
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/admin-dashboard']); 
 
         }
-      })
+      })}
   }
 
 }

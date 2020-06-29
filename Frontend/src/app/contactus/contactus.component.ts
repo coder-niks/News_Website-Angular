@@ -17,7 +17,8 @@ export class ContactusComponent implements OnInit {
   }
 
   submit()
-  {
+  {  if(this.emailProp)
+    {
 
     
       this.ds.submit({email:this.emailProp, name:this.nameProp, message:this.messageProp})
@@ -31,7 +32,7 @@ export class ContactusComponent implements OnInit {
 
 
         }
-      })
+      })}
   }
 
 }
