@@ -27,7 +27,7 @@ export class ContactusComponent implements OnInit {
         {
 
           alert('Your enquiries are submitted');
-          alert('we will contact you in 24 hours');
+          alert('We will contact you Soon');
           this.router.navigate(['/']);
 
 
