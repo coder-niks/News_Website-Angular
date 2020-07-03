@@ -93,7 +93,7 @@ app.post('/login', bodyParser.json() ,(req,res)=>{
     
         collection.insert(req.body, (err, result) => {
             if (!err) {
-                sendMail("contact.newsprism@gmail.com", "cvxfhbxdavlkekzr" , req.body.email, "Contact Request Confirmation", `<h3>Hi</h3><br><h6>your enquiery request has been submitted. We will contact you soon. </h6>`);
+                sendMail("contact.newsprism@gmail.com", "cvxfhbxdavlkekzr" , req.body.email, "Contact Request Confirmation", `<h3>Hi</h3><br><h6>your enquiry request has been submitted. We will contact you soon. </h6>`);
                 res.send({ status: "ok", data: "Message Submitted"+req.body.name });
             } else {
                 res.send({ status: "failed", data: err });

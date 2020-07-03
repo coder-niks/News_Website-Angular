@@ -26,7 +26,7 @@ export class ContactusComponent implements OnInit {
         if(response.status=="ok")
         {
 
-          alert('Your enquiries are submitted');
+          alert('Your enquiry are submitted');
           alert('We will contact you Soon');
           this.router.navigate(['/']);
 
