@@ -13,3 +13,5 @@ ng new websitewithDashboard  // create admin pannel
 
 ng g s data  // create a service
 ng g pipe greet // 
+
+build command - ng build --prod

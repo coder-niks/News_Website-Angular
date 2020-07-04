@@ -4,6 +4,7 @@ const cors  = require('cors');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 var nodemailer = require('nodemailer');
+const path = require('path');
 
 
 //var client = new MongoClient('mongodb://localhost:27017/chatroom', {useNewUrlParser:true})
@@ -64,6 +65,7 @@ const app = express();
 
 
 app.use(cors());
+app.use(express.static(path.join(__dirname,'Frontend')));
 app.post('/login', bodyParser.json() ,(req,res)=>{ 
 
 
@@ -102,7 +104,9 @@ app.post('/login', bodyParser.json() ,(req,res)=>{
     
         })
     
-   
+app.get('/', (req,res)=>{
+    res.sendFile('index.html');
+})
 
 app.listen(3000, ()=>{
     console.log("Server is listening on port 3000");
