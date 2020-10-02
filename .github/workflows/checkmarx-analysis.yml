@@ -31,8 +31,7 @@ jobs:
         checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
         checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}
         checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}
-      ![CxFlow](https://github.com/coder-niks/News_Website-Angular/workflows/CxFlow/badge.svg?branch=master) 
-    # Upload the Report for CodeQL/Security Alerts
+          # Upload the Report for CodeQL/Security Alerts
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
