@@ -6,20 +6,20 @@ Get started
 Clone the repo https://github.com/nareshmali26/News_Website.git
 cd Newsprism
 
-Installation
+## Installation
 
 Install the dependencies for the production environments using the Node shell...
 $ cd "C:\[DESTINATION_TO_YOUR_FOLDER]\[YOUR_PROJECT_FOLDER]"
 $ npm install --save
 
-Development server
+## Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-Data Modification
+## Data Modification
 All the data for each component are stored in their corresponding server located in the same folder.
 
 
-Build
+## Build
 Run ng build to build the project. The build artifacts will be stored in the dist/ directory. Use the -prod flag for a production build.
 
 
