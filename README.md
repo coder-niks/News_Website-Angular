@@ -6,6 +6,7 @@ This is a test project to demonstrate using Intern with Angular 9. It contains a
 
 Get started
 Clone the repo https://github.com/nareshmali26/News_Website.git
+
 cd Newsprism
 
 ## Installation
