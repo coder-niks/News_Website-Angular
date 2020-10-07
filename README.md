@@ -11,12 +11,16 @@ cd Newsprism
 
 ## Installation
 Install the dependencies for the production environments using the Node shell...
+
 $ cd "C:\[DESTINATION_TO_YOUR_FOLDER]\[YOUR_PROJECT_FOLDER]"
+
 $ npm install --save
 
 ## Development server
 Run ng serve for a dev server. 
+
 Navigate to http://localhost:4200
+
 The app will automatically reload if you change any of the source files.
 
 ## Data Modification
