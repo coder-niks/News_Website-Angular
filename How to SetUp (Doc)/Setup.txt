@@ -1,7 +1,13 @@
 $ git clone https://github.com/nareshmali26/News_Website.git
 $ cd News_Website
 # install the project's dependencies
-$ npm install
+$ npm install rxjs
+$ npm install bootstrap
+$ npm i -g typescript
+$ npm i -g @angular/cli // for "Angular Installation command"
+
 # watches your files and uses livereload by default run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 $ npm start
+$ step 1: go inside projectfolder
+$ step 2: ng serve -o    //  open server
 
